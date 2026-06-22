@@ -218,7 +218,7 @@ main() {
   printf '\033[1;32m============================================================\033[0m\n\n'
 
   printf '\033[1;36mAuthor:\033[0m EC, from Fudan University.\n'
-  printf '\033[1;35mPlease leave your comment in this GitHub project.\033[0m\n\n'
+  printf '\033[1;35mPlease leave your comment in this GitHub project at https://github.com/empressfiona01-eng/Fast-Installation-for-Musrfit.\033[0m\n\n'
 
   cat <<'EOF'
 
