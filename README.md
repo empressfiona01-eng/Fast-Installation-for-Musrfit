@@ -11,8 +11,8 @@ In a typical environment, this script can complete a fast musrfit installation w
 1. Clone this repository.
 
    ```bash
-   git clone <your-github-repository-url>
-   cd <your-repository-directory>
+   git clone https://github.com/empressfiona01-eng/Fast-Installation-for-Musrfit
+   cd Fast-Installation-for-Musrfit
    ```
 
 2. Run the installer as a normal user, not as `root`.
