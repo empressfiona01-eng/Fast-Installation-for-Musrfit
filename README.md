@@ -23,20 +23,6 @@ In a typical environment, this script can complete a fast musrfit installation w
    ./install_musrfit_ubuntu24.04.sh
    ```
 
-   By default, the script uses a fixed musrfit source ref to keep Ubuntu 24.04 LTS installation reproducible:
-
-   ```bash
-   MUSRFIT_REF=6ed33d65
-   ```
-
-   To try another musrfit commit or tag, override it when running the installer:
-
-   ```bash
-   MUSRFIT_REF=<another_commit_or_tag> ./install_musrfit_ubuntu24.04.sh
-   ```
-
-   The exact musrfit version installed is the commit printed in the installation log.
-
 3. After the success message, open a new shell or manually source `.bashrc`, then musrfit is available. Start musrfit by running `musredit`.
 
    ```bash
@@ -51,6 +37,34 @@ In a typical environment, this script can complete a fast musrfit installation w
 EC from Fudan University
 
 Please leave your comments or suggestions in this GitHub project.
+
+## ROOT and musrfit Versions
+
+By default, the script downloads the official CERN precompiled ROOT package for Ubuntu 24.04:
+
+```bash
+https://root.cern/download/root_v6.40.02.Linux-ubuntu24.04-x86_64-gcc13.3.tar.gz
+```
+
+This package is installed under `~/apps/root` by default. You can override the download URL with `ROOT_URL` if needed:
+
+```bash
+ROOT_URL=<another_root_tarball_url> ./install_musrfit_ubuntu24.04.sh
+```
+
+The script builds musrfit from the official Bitbucket repository, but it does not automatically install the latest upstream source by default. To keep Ubuntu 24.04 LTS installation reproducible with the system Qt6 packages, the default musrfit source ref is fixed:
+
+```bash
+MUSRFIT_REF=6ed33d65
+```
+
+To try another musrfit commit or tag, override it when running the installer:
+
+```bash
+MUSRFIT_REF=<another_commit_or_tag> ./install_musrfit_ubuntu24.04.sh
+```
+
+The exact musrfit version installed is printed in the installation report as the short commit hash and the latest commit line.
 
 ## Supported System
 
